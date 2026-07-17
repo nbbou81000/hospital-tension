@@ -1,171 +1,99 @@
+---
 name: Tension Hospitalière FR/US
-description: >
-  Dashboard de tension hospitalière : taux d'occupation des lits (États-Unis, CDC NHSN)
-  ou indicateur d'activité des urgences (France, Santé publique France / Odissé).
+description: 'Dashboard de tension hospitalière : taux d''occupation des lits (États-Unis,
+  CDC NHSN) ou indicateur d''activité des urgences (France, Santé publique France
+  / Odissé).'
 strategy: polling
 polling_url: https://VOTRE-USER.github.io/hospital-tension/data.json
-polling_headers: {}
+polling_headers: ''
 polling_verb: get
-
 custom_fields:
-  - keyname: lang
-    name: Langue de l'affichage / Display language
-    field_type: select
-    options:
-      - label: Français
-        value: fr
-      - label: English
-        value: en
-    default: fr
-
-  - keyname: country
-    name: Pays
-    field_type: select
-    options:
-      - label: France
-        value: fr
-      - label: États-Unis
-        value: us
-    default: fr
-
-  - keyname: fr_region
-    name: Région (France)
-    field_type: select
-    options:
-      - label: Île-de-France
-        value: "11"
-      - label: Centre-Val de Loire
-        value: "24"
-      - label: Bourgogne-Franche-Comté
-        value: "27"
-      - label: Normandie
-        value: "28"
-      - label: Hauts-de-France
-        value: "32"
-      - label: Grand Est
-        value: "44"
-      - label: Pays de la Loire
-        value: "52"
-      - label: Bretagne
-        value: "53"
-      - label: Nouvelle-Aquitaine
-        value: "75"
-      - label: Occitanie
-        value: "76"
-      - label: Auvergne-Rhône-Alpes
-        value: "84"
-      - label: Provence-Alpes-Côte d'Azur
-        value: "93"
-      - label: Corse
-        value: "94"
-    default: "76"
-
-  - keyname: us_state
-    name: État (États-Unis)
-    field_type: select
-    options:
-      - label: National (agrégat US)
-        value: USA
-      - label: Alabama
-        value: AL
-      - label: Alaska
-        value: AK
-      - label: Arizona
-        value: AZ
-      - label: Arkansas
-        value: AR
-      - label: California
-        value: CA
-      - label: Colorado
-        value: CO
-      - label: Connecticut
-        value: CT
-      - label: Delaware
-        value: DE
-      - label: District of Columbia
-        value: DC
-      - label: Florida
-        value: FL
-      - label: Georgia
-        value: GA
-      - label: Hawaii
-        value: HI
-      - label: Idaho
-        value: ID
-      - label: Illinois
-        value: IL
-      - label: Indiana
-        value: IN
-      - label: Iowa
-        value: IA
-      - label: Kansas
-        value: KS
-      - label: Kentucky
-        value: KY
-      - label: Louisiana
-        value: LA
-      - label: Maine
-        value: ME
-      - label: Maryland
-        value: MD
-      - label: Massachusetts
-        value: MA
-      - label: Michigan
-        value: MI
-      - label: Minnesota
-        value: MN
-      - label: Mississippi
-        value: MS
-      - label: Missouri
-        value: MO
-      - label: Montana
-        value: MT
-      - label: Nebraska
-        value: NE
-      - label: Nevada
-        value: NV
-      - label: New Hampshire
-        value: NH
-      - label: New Jersey
-        value: NJ
-      - label: New Mexico
-        value: NM
-      - label: New York
-        value: NY
-      - label: North Carolina
-        value: NC
-      - label: North Dakota
-        value: ND
-      - label: Ohio
-        value: OH
-      - label: Oklahoma
-        value: OK
-      - label: Oregon
-        value: OR
-      - label: Pennsylvania
-        value: PA
-      - label: Rhode Island
-        value: RI
-      - label: South Carolina
-        value: SC
-      - label: South Dakota
-        value: SD
-      - label: Tennessee
-        value: TN
-      - label: Texas
-        value: TX
-      - label: Utah
-        value: UT
-      - label: Vermont
-        value: VT
-      - label: Virginia
-        value: VA
-      - label: Washington
-        value: WA
-      - label: West Virginia
-        value: WV
-      - label: Wisconsin
-        value: WI
-      - label: Wyoming
-        value: WY
-    default: USA
+- keyname: lang
+  name: Langue de l'affichage / Display language
+  field_type: select
+  options:
+  - Français: fr
+  - English: en
+  default: fr
+- keyname: country
+  name: Pays
+  field_type: select
+  options:
+  - France: fr
+  - États-Unis: us
+  default: fr
+- keyname: fr_region
+  name: Région (France)
+  field_type: select
+  options:
+  - Île-de-France: '11'
+  - Centre-Val de Loire: '24'
+  - Bourgogne-Franche-Comté: '27'
+  - Normandie: '28'
+  - Hauts-de-France: '32'
+  - Grand Est: '44'
+  - Pays de la Loire: '52'
+  - Bretagne: '53'
+  - Nouvelle-Aquitaine: '75'
+  - Occitanie: '76'
+  - Auvergne-Rhône-Alpes: '84'
+  - Provence-Alpes-Côte d'Azur: '93'
+  - Corse: '94'
+  default: '76'
+- keyname: us_state
+  name: État (États-Unis)
+  field_type: select
+  options:
+  - National (agrégat US): USA
+  - Alabama: AL
+  - Alaska: AK
+  - Arizona: AZ
+  - Arkansas: AR
+  - California: CA
+  - Colorado: CO
+  - Connecticut: CT
+  - Delaware: DE
+  - Florida: FL
+  - Georgia: GA
+  - Hawaii: HI
+  - Idaho: ID
+  - Illinois: IL
+  - Indiana: IN
+  - Iowa: IA
+  - Kansas: KS
+  - Kentucky: KY
+  - Louisiana: LA
+  - Maine: ME
+  - Maryland: MD
+  - Massachusetts: MA
+  - Michigan: MI
+  - Minnesota: MN
+  - Mississippi: MS
+  - Missouri: MO
+  - Montana: MT
+  - Nebraska: NE
+  - Nevada: NV
+  - New Hampshire: NH
+  - New Jersey: NJ
+  - New Mexico: NM
+  - New York: NY
+  - North Carolina: NC
+  - North Dakota: ND
+  - Ohio: OH
+  - Oklahoma: OK
+  - Oregon: OR
+  - Pennsylvania: PA
+  - Rhode Island: RI
+  - South Carolina: SC
+  - South Dakota: SD
+  - Tennessee: TN
+  - Texas: TX
+  - Utah: UT
+  - Vermont: VT
+  - Virginia: VA
+  - Washington: WA
+  - West Virginia: WV
+  - Wisconsin: WI
+  - Wyoming: WY
+  - District of Columbia: DC
+  default: USA
