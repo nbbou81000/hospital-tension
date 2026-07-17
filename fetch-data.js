@@ -262,10 +262,18 @@ async function main() {
     }
   }
 
+  const usNameToCode = {};
+  Object.entries(US_STATES).forEach(([code, name]) => { usNameToCode[name] = code; });
+
+  const frNameToCode = {};
+  Object.entries(FR_REGIONS).forEach(([code, name]) => { frNameToCode[name] = code; });
+
   const output = {
     generatedAt: new Date().toISOString(),
     us: usStates,
-    fr: frRegions
+    fr: frRegions,
+    usNameToCode,
+    frNameToCode
   };
 
   const fs = await import("fs");
